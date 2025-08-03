@@ -15,7 +15,7 @@ import { useColorScheme } from "~/lib/useColorScheme";
 import { PortalHost } from "@rn-primitives/portal";
 import { ThemeToggle } from "~/components/ThemeToggle";
 import { setAndroidNavigationBar } from "~/lib/android-navigation-bar";
-import Logo from "~/components/ui/logo";
+import Logo from "~/components/logo";
 
 const LIGHT_THEME: Theme = {
   ...DefaultTheme,
@@ -46,17 +46,9 @@ export default function RootLayout() {
       <StatusBar style={isDarkColorScheme ? "light" : "dark"} />
       <Stack initialRouteName="onboarding">
         <Stack.Screen
-          name="index"
-          options={{
-            title: "Starter Base",
-            headerRight: () => <ThemeToggle />,
-          }}
-        />
-        <Stack.Screen
           name="onboarding"
           options={{
-            title: "Onboarding",
-            headerTitle: () => <Logo />,
+            headerTitle: () => <Logo title="Little Lemon" />,
             headerTitleAlign: "center",
             headerRight: () => <ThemeToggle />,
           }}
